@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.twitsplit.viewmodel.AddTweetModel" />
+    </data>
+
+    <ScrollView
+        style="@style/Match"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <FrameLayout
+            style="@style/Match"
+            android:padding="@dimen/activity_margin">
+
+            <EditText
+                android:id="@+id/add_tweet"
+                style="@style/MatchWidth"
+                android:gravity="top"
+                android:hint="@string/tweet_hint"
+                android:inputType="textMultiLine"
+                android:minHeight="150dp"
+                android:text="@={viewmodel.tweet}"/>
+        </FrameLayout>
+    </ScrollView>
+</layout>
