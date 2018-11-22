@@ -4,6 +4,10 @@
     <data>
 
         <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.twitsplit.viewmodel.TweetsListModel" />
     </data>
 
     <FrameLayout style="@style/Match">

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TwitSplit</string>
     <string name="add_tweet">Add Tweet</string>
+    <string name="tweet_hint">Enter Tweet</string>
+    <string name="empty_tweet_message">Please enter tweet</string>
+    <string name="space_tweet_message">Tweet not allowed without spaces more than 50 characters</string>
 </resources>

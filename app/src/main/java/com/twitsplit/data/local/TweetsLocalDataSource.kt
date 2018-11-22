@@ -33,4 +33,12 @@ class TweetsLocalDataSource(val executor: Executor, private val tweetsDao: Tweet
     override fun saveTweet(tweet: Tweet) {
         executor.execute { tweetsDao.insertTweet(tweet) }
     }
+
+    override fun getTweet(tweetId: Int): LiveData<Tweet> {
+        return tweetsDao.getTweetById(tweetId)
+    }
+
+    override fun deleteAllTweets() {
+        return tweetsDao.deleteAllTweets()
+    }
 }

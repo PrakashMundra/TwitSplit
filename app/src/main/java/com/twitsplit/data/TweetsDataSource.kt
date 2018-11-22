@@ -7,4 +7,8 @@ interface TweetsDataSource {
     fun getTweetsList(): LiveData<List<Tweet>>
 
     fun saveTweet(tweet: Tweet)
+
+    fun getTweet(tweetId: Int): LiveData<Tweet>
+
+    fun deleteAllTweets()
 }

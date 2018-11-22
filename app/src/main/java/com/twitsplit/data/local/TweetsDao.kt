@@ -14,4 +14,10 @@ interface TweetsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTweet(tweet: Tweet)
+
+    @Query("SELECT * FROM Tweets WHERE id = :tweetId")
+    fun getTweetById(tweetId: Int): LiveData<Tweet>
+
+    @Query("DELETE FROM Tweets")
+    fun deleteAllTweets()
 }

@@ -34,4 +34,12 @@ class TweetsDataRepository(private val tweetsLocalDataSource: TweetsLocalDataSou
     override fun saveTweet(tweet: Tweet) {
         return tweetsLocalDataSource.saveTweet(tweet)
     }
+
+    override fun getTweet(tweetId: Int): LiveData<Tweet> {
+        return tweetsLocalDataSource.getTweet(tweetId)
+    }
+
+    override fun deleteAllTweets() {
+        return tweetsLocalDataSource.deleteAllTweets()
+    }
 }

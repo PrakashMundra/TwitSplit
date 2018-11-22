@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="tweet"
+            type="com.twitsplit.data.model.Tweet" />
+    </data>
+
+    <RelativeLayout
+        style="@style/MatchWidth"
+        android:padding="@dimen/list_item_padding">
+
+        <TextView
+            android:id="@+id/item_tweet"
+            style="@style/MatchWidth"
+            android:text="@{tweet.getSplitTweet}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark" />
+    </RelativeLayout>
+</layout>
